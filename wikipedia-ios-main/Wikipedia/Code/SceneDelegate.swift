@@ -96,7 +96,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appViewController.showSplashView()
         var userInfo = userActivity.userInfo
         userInfo?[WMFRoutingUserInfoKeys.source] = WMFRoutingUserInfoSourceValue.deepLinkRawValue
-//        userInfo?["lat"] = u
         userActivity.userInfo = userInfo
         
         _ = appViewController.processUserActivity(userActivity, animated: false) { [weak self] in

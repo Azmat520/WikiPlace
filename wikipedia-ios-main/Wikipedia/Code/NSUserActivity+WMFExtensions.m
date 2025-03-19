@@ -83,12 +83,8 @@ __attribute__((annotate("returns_localized_nsstring"))) static inline NSString *
         NSMutableArray<NSURLQueryItem *> *queryItems = [NSMutableArray array];
         [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lat" value:latitude]];
         [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lon" value:longitude]];
-        
-        // Add the existing article URL if it's available
-//        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"WMFArticleURL" value:articleURL.absoluteString]];
+
         urlComponents.queryItems = queryItems;
-        
-        // Assign the properly constructed URL with scheme (https)
         activity.webpageURL = urlComponents.URL;
     }
     return activity;
